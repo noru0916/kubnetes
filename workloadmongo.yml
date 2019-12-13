@@ -20,9 +20,8 @@ spec:
               name: mongo-persistent-storage
       volumes:
         - name: mongo-persistent-storage
-          hostPath:
-            path: /Users/bimalkeeth/go/src/kubnetes
-            type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: mongo-pvc
 
 ---
 apiVersion: v1
